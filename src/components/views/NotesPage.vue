@@ -15,9 +15,7 @@
 <script>
 import Collapse from '../elements/Collapse'
 import Article from '../elements/Article'
-import overview from '../../assets/articles/overview'
-import checklist from '../../assets/articles/checklist'
-import basicimplementation from '../../assets/articles/basicimplementation'
+import githubpages from '../../assets/articles/notes/frontend/githubpages'
 export default {
   components: {
     Collapse,
@@ -26,29 +24,17 @@ export default {
   data() {
     return {
       guide: {
-        title: 'Wechat Miniapp',
+        title: 'Frontend Notes',
         items: [{
-          key: 'overview',
+          key: 'githubpages',
           index: 0,
-          name: 'Overview'
-        },
-        {
-          key: 'checklist',
-          index: 1,
-          name: 'Checklist'
-        },
-        {
-          key: 'basicimplementation',
-          index: 2, 
-          name: 'Basic Implementation'
+          name: 'Using Github Pages to deploy your Vue project'
         }]
       },
       articleList: {
-        overview: overview,
-        checklist: checklist,
-        basicimplementation: basicimplementation
+        githubpages: githubpages
       },
-      currentItem: overview
+      currentItem: githubpages
     }
   },
   methods: {

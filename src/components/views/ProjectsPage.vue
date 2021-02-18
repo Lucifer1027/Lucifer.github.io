@@ -15,9 +15,9 @@
 <script>
 import Collapse from '../elements/Collapse'
 import Article from '../elements/Article'
-import overview from '../../assets/articles/overview'
-import checklist from '../../assets/articles/checklist'
-import basicimplementation from '../../assets/articles/basicimplementation'
+import overview from '../../assets/articles/projects/remotecontroller/overview'
+import checklist from '../../assets/articles/projects/remotecontroller/checklist'
+import basicimplementation from '../../assets/articles/projects/remotecontroller/basicimplementation'
 export default {
   components: {
     Collapse,

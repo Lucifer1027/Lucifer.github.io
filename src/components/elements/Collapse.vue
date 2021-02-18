@@ -36,7 +36,7 @@ export default {
   box-sizing: border-box;
   .collapse-title {
     cursor: default;
-    height: 45px;
+    height: 50px;
     width: 100%;
     line-height: 50px;
     font-size: 13px;
@@ -49,14 +49,22 @@ export default {
   }
   .collapse-item {
     cursor: pointer;
-    height: 40px;
+    height: fit-content;
     width: 100%;
     box-sizing: border-box;
-    line-height: 40px;
+    line-height: 18px;
     font-size: 12px;
-    font-weight: bold;
+    // font-weight: bold;
+    margin: 10px 0;
     color: #aaaaaa;
     text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /*! autoprefixer: off */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: inline-block;
   }
   .collapse-item-active {
     color: rgb(113, 146, 255);
