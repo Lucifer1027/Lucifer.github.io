@@ -1,0 +1,44 @@
+<template>
+  <div class="footer-container">
+    <div class="info-container">
+      <div class="main-info">
+        Copyright © 2021 Lucifer1027 @ github.com All rights reserved.
+      </div>
+      <div class="other-info">
+      </div>
+    </div>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.footer-container {
+  width: 100%;
+  height: 70px;
+  min-width: 1300px;
+  box-sizing: border-box;
+  background-color: #000;
+  padding: 30px 0 20px;
+  .info-container {
+    width: fit-content;
+    margin: auto;
+    .main-info {
+      height: 25px;
+      width: fit-content;
+      box-sizing: border-box;
+      line-height: 14px;
+      padding-bottom: 10px;
+      font-size: 14px;
+      text-align: center;
+      letter-spacing: 0.2px;
+      color: #888888;
+      // border-bottom: 1px solid #cccccc;
+    }
+    .other-info {
+      height: 25px;
+      color: #999999;
+      padding-top: 5px;
+      font-size: 12px;
+    }
+  }
+}
+</style>
