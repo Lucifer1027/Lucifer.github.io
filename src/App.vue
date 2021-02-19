@@ -56,13 +56,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#app {
-  font-family: source sans pro,helvetica neue,Helvetica,Arial,sans-serif;
-  font-feature-settings: 'dlig' 1,'liga' 1,'lnum' 1,'kern' 1;
-  font-style: normal;
-  margin-top: 0;
-}
-.message {
-  width: 200px;
-}
+  @import '../node_modules/vue-code-highlight/themes/prism.css';
+  @import '../node_modules/vue-code-highlight/themes/window.css';
+  #app {
+    font-family: source sans pro,helvetica neue,Helvetica,Arial,sans-serif;
+    font-feature-settings: 'dlig' 1,'liga' 1,'lnum' 1,'kern' 1;
+    font-style: normal;
+    margin-top: 0;
+  }
+  .message {
+    width: 200px;
+  }
 </style>

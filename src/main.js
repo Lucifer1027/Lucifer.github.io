@@ -7,10 +7,11 @@ import 'element-ui/lib/theme-chalk/index.css';
 import Vuex from 'vuex'
 import router from "./router/router.js"
 import store from "./store/store.js"
-
+import VueCodeHighlight from 'vue-code-highlight';
 
 Vue.use(ElementUI)
 Vue.use(Vuex)
+Vue.use(VueCodeHighlight)
 
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
