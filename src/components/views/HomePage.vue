@@ -52,12 +52,14 @@ export default {
     background-position: center;
     .homepage-info {
       width: 100%;
+      min-width: 1300px;
       height: fit-content;
       top: 50%;
       position: absolute;
       transform: translateY(-50%);
       .homepage-description, .homepage-title {
         width: 100%;
+        min-width: 1300px;
         padding: 0 200px;
         box-sizing: border-box;
       }
