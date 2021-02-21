@@ -1,6 +1,6 @@
 <template>
   <div class="navigation-bar-container">
-    <div class="navigation-bar-logo-container" @click="goHomePage">
+    <div class="navigation-bar-logo-container" @click="changeTab(-1)">
       <img class="navigation-bar-logo" src="../../assets/icons/logo.png" />
     </div>
     <div class="navigation-bar-tab-container">
@@ -37,11 +37,8 @@ export default {
       for (var i in this.tabs) {
         this.tabs[i].selected = false
       }
-      this.tabs[index].selected = true
+      if(index != -1) this.tabs[index].selected = true
       this.$emit('change-tab', index + 1)
-    },
-    goHomePage: function () {
-      this.$router.push('home')
     }
   }
 }
@@ -74,11 +71,11 @@ export default {
     overflow: hidden;
     .navigation-bar-tab {
       cursor: pointer;
-      box-sizing: border-box;
       display: inline-block;
       width: fit-content;
       height: 45px;
-      margin: 25px 20px 0;
+      padding: 22px 0 0;
+      margin: 0 20px;
       color: #fff;
       font-size: 1.1em;
     }

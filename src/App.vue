@@ -21,6 +21,7 @@ export default {
   data() {
     return {
       navBarPosition: 'absolute',
+      currentPage: 'home'
     }
   },
   mounted() {
@@ -43,11 +44,17 @@ export default {
     },
     changeTab: function (index) {
       switch (index) {
+        case 0:
+          if (this.currentPage != 'home') this.$router.push('home')
+          this.currentPage = 'home'
+          break
         case 1:
-          this.$router.push('projects')
+          if (this.currentPage != 'projects') this.$router.push('projects')
+          this.currentPage = 'projects'
           break
         case 2:
-          this.$router.push('notes')
+          if (this.currentPage != 'notes') this.$router.push('notes')
+          this.currentPage = 'notes'
           break
       }
     }
