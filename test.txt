@@ -1,4 +1,7 @@
 $n testname
-# Test Article
-## Blog tilte
+#  ArticleTitle
+## Paragraph title
 This is a test paragraph to test if the python converter can transfrom the txt file into the js file format use in the Lucifer.github.io
+Test second paragraph
+## Paragraph title two
+Test second paragraph

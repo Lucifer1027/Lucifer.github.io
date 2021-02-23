@@ -1,2 +1,1 @@
-let test = 1
-let newline = 2
+let article={type:'article',name:'testname',title:'ArticleTitle',paragraphs:[
