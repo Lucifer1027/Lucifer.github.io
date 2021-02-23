@@ -51,6 +51,10 @@ export default {
       currentItem: overview
     }
   },
+  mounted: function () {
+    const files = require.context('../../assets/articles/projects', true, /\.js$/).keys()
+    console.log(files)
+  },
   methods: {
     clickCollapseItem: function (item) {
       this.currentItem = this.articleList[item.key]

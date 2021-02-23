@@ -3,14 +3,12 @@
     <div class="article-title">
       {{article.title}}
     </div>
-    <div v-for="paragraph in article.paragraphs" :key="paragraph.key" class="article-paragraph">
-        <div class="paragraph-title">
-          {{paragraph.title}}
-        </div>
-        <div v-for="item in paragraph.body" :key="item.key" class="paragraph-body">
-          <div v-if="item.type=='text'" class="paragraph-body-text">{{item.val}}</div>
-          <div v-if="item.type=='code'" v-highlight >
-            <pre :class="item.lang">
+    <div v-for="item in article.body" :key="item.key" class="article-paragraph">
+        <div v-if="item.type=='title'" class="paragraph-title">{{item.val}}</div>
+        <div v-if="item.type=='text'" class="paragraph-body-text">{{item.val}}</div>
+        <div v-if="item.type=='code'" class="code-block">
+          <div v-highlight>
+            <pre :class="item.lang" style="box-sizing: border-box; width: 100%;">
               <code>
                 {{item.val}}
               </code>
@@ -60,17 +58,19 @@ export default {
       font-size: 18px;
       font-weight: bold;
     }
-    .paragraph-body {
+    .code-block {
+      padding: 0 20px;
       margin: 20px 0;
+    }
+    .paragraph-body-text {
+      line-height: 35px;
+      color: #777777;
+      font-size: 16px;
+      margin: 10px 0;
       width: 100%;
       height: fit-content;
       box-sizing: border-box;
       padding: 0 20px;
-      .paragraph-body-text {
-        line-height: 35px;
-        color: #777777;
-        font-size: 16px;
-      }
     }
   }
 }
