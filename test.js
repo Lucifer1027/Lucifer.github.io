@@ -1,1 +1,0 @@
-let article={type:'article',name:'testname',title:'ArticleTitle',paragraphs:[

@@ -1,25 +1,13 @@
 import os
 from os import path
 
-def readParagraph(lines, outputFile):
-  j = 0 # iterator
-  while (lines[j] is not None) and (lines[j][0:3] == '#  '):
-    print(lines[j])
-    # newLine = lines[j][3:]
-    # outputFile.write("{type:'text',val:'" + newLine + "'},")
-    j += 1
-  return j
-
 def readFile(lines, outputFile):
-  i = 0
-  print(lines[10] == None)
-  # while lines[i] is not None:
-  #   if lines[i][0:3] == '## ':
-  #     newLine = lines[i][3:]
-  #     outputFile.write("{title:'" + newLine + "',body:[")
-  #     i += readParagraph(lines[i+1:], outputFile)
-  #     outputFile.write("]},")
-  #   else: i += 1
+  for line in lines:
+    if (line[0:3] == '## '):
+      newLine = line[3:]
+      outputFile.write("{type:'title',val:'" + newLine + "'},")
+    else:
+      outputFile.write("{type:'text',val:'" + newLine + "'},")
     
 
 def convert(filename, outputname):
@@ -39,7 +27,7 @@ def convert(filename, outputname):
         newLine = line[3:]
         outputFile.write("title:'" + newLine + "',")
     if (validFileTitle and validFileName):
-      outputFile.write('paragraphs:[')
+      outputFile.write('body:[')
       readFile(lines[2:], outputFile)
       outputFile.write(']}')
 
