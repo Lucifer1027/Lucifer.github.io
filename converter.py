@@ -7,6 +7,7 @@ def readFile(lines, outputFile):
       newLine = line[3:]
       outputFile.write("{type:'title',val:'" + newLine + "'},")
     else:
+      newLine = line
       outputFile.write("{type:'text',val:'" + newLine + "'},")
     
 
@@ -29,7 +30,7 @@ def convert(filename, outputname):
     if (validFileTitle and validFileName):
       outputFile.write('body:[')
       readFile(lines[2:], outputFile)
-      outputFile.write(']}')
+      outputFile.write(']};export default article;')
 
 def main():
   filename = 'test'
